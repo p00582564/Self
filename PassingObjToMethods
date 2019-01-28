@@ -1,0 +1,38 @@
+public class Test {
+  public static void main(String[] args) {
+    Count myCount = new Count();
+    int times = 0;
+
+    for (int i = 0; i < 100; i++)
+      increment(myCount, times);
+
+    System.out.println("count is " + myCount.count);
+    System.out.println("times is " + times);
+  }
+
+  public static void increment(Count c, int t) {
+    c.count++;
+    t++;
+  }
+}
+
+class Count {
+  public int count;
+
+  public Count(int c) {
+    count = c;
+  }
+
+  public Count() {
+    count = 1;
+  }
+}  /* Java uses "pass by value" to pass parameters to a method. 
+When passing a variable of a primitive type to a method, the variable remains unchanged after the method finishes. 
+However, when passing a variable of a reference type to a method, 
+any changes to the object referenced by the variable inside the method are permanent changes to the 
+object referenced by the variable outside of the method. Both the actual parameter and 
+the formal parameter variables reference to the same object.The output of the program is as follows:
+
+count 101
+times 0
+        */    
