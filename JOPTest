@@ -1,0 +1,60 @@
+import javax.swing.JOptionPane;
+
+public class test {
+	public static void main(String[] args) {
+		JOptionPane ui = new JOptionPane(); //create joptionpane obj
+		
+		ui.showMessageDialog(null, "This is a example of encapsulation");  //show message 
+		
+		//JOptionsPane only takes string input, convert string to double
+		String dialogInput = ui.showInputDialog("what is the side Length");
+		double sL = Double.parseDouble(dialogInput);
+		
+    //creating box with the inputted side length
+		Box boxn1 = new Box(sL);
+    
+		
+	}
+
+}
+class Box {
+	private double length;
+
+	Box() {
+		length = 1;
+	}
+
+	Box(double inpLength) {
+		length = inpLength;
+	}
+
+	void setLength(double newLength) {
+		length = newLength;
+	}
+
+	double getLength() {
+		return length;
+	}
+
+	double getArea() {
+		return length * length;
+	}
+
+	double getPerimeter() {
+		return 4 * length;
+	}
+
+}// end of Box
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Press h to open a hovercard with more details.
