@@ -1,3 +1,6 @@
+/*i dumbed-down the code even simpler by having box becoming a square to get rid of one more variable and using that to test out 
+JOptionPane, since I am new to this */
+
 import javax.swing.JOptionPane;
 
 public class test {
@@ -10,7 +13,7 @@ public class test {
 		String dialogInput = ui.showInputDialog("what is the side Length");
 		double sL = Double.parseDouble(dialogInput);
 		
-    //creating box with the inputted side length
+   		//creating box with the inputted side length
 		Box boxn1 = new Box(sL);
     
 		
